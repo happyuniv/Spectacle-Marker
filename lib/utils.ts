@@ -6,7 +6,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatDate(dateString: string) {
-  const date = new Date(dateString).toLocaleString('ko-KR')
+  const date = new Date(dateString).toLocaleString('ko-KR', {
+    timeZone: 'Asia/Seoul',
+  })
   const formattedDate = date
     .replaceAll('.', '')
     .replace(' ', '.')
