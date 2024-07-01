@@ -36,14 +36,18 @@ export default function PostCard({ post }: props) {
             <PostDotMenu post={post} />
           </div>
           <div>
-            <div className='flex justify-between text-sm'>
+            <div className='flex flex-col min-[480px]:flex-row justify-between text-sm'>
               <span className='text-gray-500'>
                 {formatDate(post.$createdAt)}
               </span>
-              <div className='flex items-center'>
-                <MapPin />
-                <span className='font-semibold'>{post.place}</span>
-              </div>
+              {post.place && (
+                <div className='flex justify-center min-[480px]:justify-start items-center mt-3 min-[480px]:mt-0'>
+                  <MapPin />
+                  <span className='text-sm min-[480px]:text-base font-semibold'>
+                    {post.place}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         </div>

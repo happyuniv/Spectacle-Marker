@@ -21,7 +21,7 @@ export default function Bottombar() {
               `}
               >
                 {item.icon}
-                <span>{item.label}</span>
+                <span className='text-xs sm:text-base'>{item.label}</span>
               </Link>
             </li>
           ))}
