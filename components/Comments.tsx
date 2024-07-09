@@ -52,7 +52,7 @@ export default function Comments({ postId }: props) {
     <>
       <div className='flex-col mt-5 xl:mt-0 xl:pl-14'>
         <div>댓글</div>
-        <div className='flex flex-col gap-2 min-w-[400px] mt-5 h-full xl:p-1'>
+        <div className='flex flex-col gap-2 mt-5 w-full sm:min-w-[400px] h-full xl:p-1'>
           <CommentForm postId={postId} action='create' />
           {isLoading && <Loader />}
           {!isLoading && (

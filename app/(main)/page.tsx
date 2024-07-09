@@ -20,7 +20,7 @@ export default function Page() {
     <>
       <div className='px-12 md:py-10 w-full'>
         <div className='max-w-3xl w-full h-fit'>
-          <h2 className='text-3xl font-bold'>최신 피드</h2>
+          <h2 className='mt-5 sm:mt-0 text-3xl font-bold'>최신 피드</h2>
           <div className='flex flex-col gap-10 mt-16'>
             {posts?.pages.map((item, index) => (
               <PostCardList key={index} posts={item!.documents} />

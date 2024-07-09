@@ -21,8 +21,8 @@ export default function PostCarousel({ imageUrls }: props) {
       <CarouselContent>
         {imageUrls.map((url, index) => (
           <CarouselItem key={index}>
-            <div className='relative w-full max-h-[480px] border rounded-3xl bg-black bg-opacity-5 aspect-square'>
-              <Image src={url} fill alt='' className='object-contain' />
+            <div className='relative w-full max-h-[500px] aspect-square'>
+              <Image src={url} fill alt='' className='border rounded-3xl' />
             </div>
           </CarouselItem>
         ))}

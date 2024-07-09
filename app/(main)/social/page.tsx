@@ -24,7 +24,7 @@ export default function Page() {
                 >
                   <Link href={`/profile/${creator.$id}`}>
                     <Image
-                      src={creator.imageUrl}
+                      src={creator.imageUrl || '/logo.png'}
                       width={64}
                       height={64}
                       alt='profile_image'
